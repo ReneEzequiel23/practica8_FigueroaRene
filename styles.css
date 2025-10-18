@@ -153,6 +153,55 @@ main {
     font-size: 1.25rem;
 }
 
+.sidebar {
+    display: none;
+    flex-direction: column;
+    width: 260px;
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-right: 1px solid var(--darker-gray);
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+.sidebar nav li {
+    cursor: pointer;
+    color: var(--off-white);
+}
+
+.library-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.library-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--gray);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.library-item:hover {
+    background-color: var(--darker-gray);
+}
+
 @media(min-width: 770px) {
     .songs-header {
         text-transform: uppercase;
@@ -194,5 +243,9 @@ main {
     .song-info p:first-child {
         font-weight: 400;
         font-size: 1rem;
+    }
+
+    .sidebar {
+        display: flex;
     }
 }
